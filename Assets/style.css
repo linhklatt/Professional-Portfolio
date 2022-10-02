@@ -14,8 +14,9 @@ body {
 }
 main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
+
 .header {
   padding: 30px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -55,6 +56,7 @@ a {
 }
 section h2 {
   float: left;
+  padding: 5%;
 }
 .hero {
   position: relative;
@@ -68,21 +70,23 @@ section h2 {
 .hero h2 {
   text-align: end;
 }
-.cool-subtitle-here {
-  width: 15%;
+.quote {
+  width: 42%;
   position: absolute;
-  bottom: 30px;
+  bottom: 13px;
   right: 40px;
-  font-size: 35px;
+  font-size: 27px;
   background-color: #78ffff;
   text-align: center;
+  quotes: initial;
+  font-weight: bold;
 }
 
 .flex-container {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  overflow: auto;
 }
 .flex-container img {
   border: 3px solid #78ffff;
@@ -108,12 +112,14 @@ section h2 {
 }
 #wrap-container {
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  align-items: flex-start;
+  flex-flow: row wrap;
 }
-
+footer {
+  display: inline;
+  align-items: flex-start;
+}
 .info a {
   color: #30373b;
   padding-right: 100px;
-  float: right;
 }
