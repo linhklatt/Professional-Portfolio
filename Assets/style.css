@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: #fff;
+}
+.linhklatt {
+  width: 50%;
+  margin: 20px;
+  background-color: #78ffff;
+  color: #30373b;
+}
+main {
+  display: flex;
+  flex-direction: row;
+}
+.header {
+  padding: 30px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: #30373b;
+  text-decoration: none;
+  color: #ffffff;
+}
+.header h1 {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 48px;
+  color: #30373b;
+  text-align: center;
+}
+.header nav {
+  float: right;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 30px;
+  margin-right: 20px;
+  padding: auto;
+}
+nav {
+  display: block;
+  color: #2196cc;
+}
+a {
+  color: #78ffff;
+}
+.header nav ul {
+  list-style-type: none;
+  margin-right: 30px;
+}
+.header nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+section h2 {
+  float: left;
+}
+.hero {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  margin-bottom: 25px;
+  background-image: url(https://pico-consulting.com/wp-content/uploads/2017/03/shutterstock_429037264_Project-manager.jpg);
+  background-size: cover;
+  background-position: 0%;
+}
+.hero h2 {
+  text-align: end;
+}
+.cool-subtitle-here {
+  width: 15%;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  font-size: 35px;
+  background-color: #78ffff;
+  text-align: center;
+}
+
+.flex-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+}
+.flex-container img {
+  border: 3px solid #78ffff;
+  flex-direction: row;
+}
+.flex-container:hover {
+  border-radius: 8px;
+  transition: all 0.5s ease-in-out;
+  box-shadow: inset 0px 0px 8px #2196cc, 0px 0px 15px #2196cc;
+}
+.surf-report,
+.led-wall,
+.calculator,
+.pastel-puzzels,
+.run-buddy {
+  position: absolute;
+  bottom: 20px;
+  font-size: 15px;
+  background-color: #78ffff;
+  float: left;
+  text-align: left;
+  padding: 5px;
+}
+#wrap-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.info a {
+  color: #30373b;
+  padding-right: 100px;
+  float: right;
+}
