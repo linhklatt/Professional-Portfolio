@@ -16,7 +16,9 @@ main {
   display: flex;
   flex-direction: column;
 }
-
+.content {
+  display: flex;
+}
 .header {
   padding: 30px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -82,24 +84,26 @@ section h2 {
   font-weight: bold;
 }
 
-.flex-container {
+.flex-items {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  align-content: flex-end;
+  justify-content: flex-start;
+  padding: 5px;
 }
-.flex-container img {
+.flex-items img {
   border: 3px solid #78ffff;
   flex-direction: row;
 }
-.flex-container:hover {
+.flex-items:hover {
   border-radius: 8px;
   transition: all 0.5s ease-in-out;
   box-shadow: inset 0px 0px 8px #2196cc, 0px 0px 15px #2196cc;
 }
-.surf-report,
-.led-wall,
-.calculator,
+.project-manager,
+.data-specialist,
+.calculus,
 .pastel-puzzels,
 .run-buddy {
   position: absolute;
@@ -110,16 +114,20 @@ section h2 {
   text-align: left;
   padding: 5px;
 }
-#wrap-container {
+.flex-container {
   display: flex;
-  align-items: flex-start;
+  justify-content: flex-end;
   flex-flow: row wrap;
+  flex-shrink: 0;
 }
 footer {
-  display: inline;
-  align-items: flex-start;
+  display: flex;
+  margin-bottom: 18px;
+  justify-content: center;
 }
 .info a {
   color: #30373b;
   padding-right: 100px;
+  font-size: 20px;
+  font-weight: bolder;
 }
