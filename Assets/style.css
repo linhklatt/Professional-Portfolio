@@ -1,29 +1,61 @@
+:root {
+  --font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --back-ground-color: #fde6e0;
+  --border-color: #93b3b0;
+  --font-color: #53515e;
+  --border-box-color: #eba99d;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 body {
-  background-color: #fff;
+  background-color: var(--back-ground-color);
 }
+
 .linhklatt {
-  width: 50%;
+  width: 60%;
   margin: 20px;
-  background-color: #78ffff;
-  color: #30373b;
+  background-color: var(--back-ground-color);
+  color: var(--font-color);
+  text-decoration: none;
 }
-main {
+#about-me {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+#about-me h2 {
+  border-right: 5px groove var(--border-color);
+  margin: 0 35px 0 0px;
+  font-size: 34px;
+  font-family: var(--font-family);
+}
+
+#work {
+  display: flex;
+  flex-direction: row;
+  margin: 50px 0;
+}
+#work h2 {
+  border-right: 5px groove var(--border-color);
+  margin: 0 35px 0 12px;
+  font-size: 34px;
+  font-family: var(--font-family);
 }
 .content {
   display: flex;
+  flex-direction: column;
 }
 .header {
   padding: 30px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background-color: #30373b;
+  background-color: #93b3b0;
   text-decoration: none;
   color: #ffffff;
 }
@@ -39,14 +71,14 @@ main {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 30px;
   margin-right: 20px;
-  padding: auto;
+  padding: 10px;
 }
 nav {
   display: block;
   color: #2196cc;
 }
 a {
-  color: #78ffff;
+  color: #53515e;
 }
 .header nav ul {
   list-style-type: none;
@@ -57,17 +89,18 @@ a {
   margin-left: 20px;
 }
 section h2 {
-  float: left;
+  display: flex;
   padding: 5%;
+  text-align: end;
 }
 .hero {
   position: relative;
   height: 300px;
   width: 100%;
   margin-bottom: 25px;
-  background-image: url(https://pico-consulting.com/wp-content/uploads/2017/03/shutterstock_429037264_Project-manager.jpg);
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20210324/pngtree-portfolio-memphis-playful-abstract-pink-image_593412.jpg);
   background-size: cover;
-  background-position: 0%;
+  background-position: bottom;
 }
 .hero h2 {
   text-align: end;
@@ -75,59 +108,102 @@ section h2 {
 .quote {
   width: 42%;
   position: absolute;
-  bottom: 13px;
-  right: 40px;
+  bottom: 8px;
+  right: 17px;
   font-size: 27px;
-  background-color: #78ffff;
   text-align: center;
   quotes: initial;
   font-weight: bold;
-}
-
-.flex-items {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  justify-content: flex-start;
-  padding: 5px;
-}
-.flex-items img {
-  border: 3px solid #78ffff;
-  flex-direction: row;
-}
-.flex-items:hover {
-  border-radius: 8px;
-  transition: all 0.5s ease-in-out;
-  box-shadow: inset 0px 0px 8px #2196cc, 0px 0px 15px #2196cc;
-}
-.project-manager,
-.data-specialist,
-.calculus,
-.pastel-puzzels,
-.run-buddy {
-  position: absolute;
-  bottom: 20px;
-  font-size: 15px;
-  background-color: #78ffff;
-  float: left;
-  text-align: left;
-  padding: 5px;
 }
 .flex-container {
   display: flex;
   justify-content: flex-end;
   flex-flow: row wrap;
-  flex-shrink: 0;
+  margin: 0;
 }
+.flex-small-items {
+  position: relative;
+  display: flex;
+  padding: 5px;
+  width: 50%;
+}
+.flex-main-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.flex-main-item img {
+  border: 3px solid var(--border-color);
+  width: 100%;
+  height: 350px;
+}
+.flex-small-items img {
+  border: 3px solid var(--border-color);
+  width: 100%;
+  height: 250px;
+}
+
+.flex-small-items:hover {
+  transition: all 0.6s ease-in-out;
+  box-shadow: inset 0px 0px 10px var(--border-box-color),
+    0px 0px 15px var(--border-box-color);
+}
+.flex-main-item:hover {
+  transition: all 0.6s ease-in-out;
+  box-shadow: inset 0px 0px 10px var(--border-box-color),
+    0px 0px 15px var(--border-box-color);
+}
+
+.data-specialist,
+.calculus,
+.city-college,
+.ucsd-bootcamp {
+  position: absolute;
+  bottom: 20px;
+  font-size: 15px;
+  background-color: var(--border-box-color);
+  text-align: left;
+  padding: 5px;
+  -webkit-box-decoration-break: clone;
+  box-shadow: 10px 5px 5px var(--border-color);
+}
+.project-manager {
+  position: absolute;
+  bottom: -153px;
+  font-size: 15px;
+  background-color: var(--border-box-color);
+  text-align: left;
+  padding: 5px;
+  -webkit-box-decoration-break: clone;
+  box-shadow: 10px 5px 5px var(--border-color);
+}
+
 footer {
   display: flex;
-  margin-bottom: 18px;
+  align-items: flex-end;
+  margin-bottom: 10px;
   justify-content: center;
 }
-.info a {
+.info {
   color: #30373b;
-  padding-right: 100px;
-  font-size: 20px;
+  padding-right: 650px;
+  font-size: 16px;
   font-weight: bolder;
+  text-align: center;
+}
+.info a {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+#contact-me {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#contact-me h2 {
+  border-right: 5px groove var(--border-color);
+  margin: 0 0px 0px 98px;
+  font-size: 34px;
+  font-family: var(--font-family);
 }
