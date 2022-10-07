@@ -1,5 +1,5 @@
 :root {
-  --font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --font-family: "Gemunu Libre", sans-serif;
   --back-ground-color: #fde6e0;
   --border-color: #93b3b0;
   --font-color: #53515e;
@@ -22,31 +22,39 @@ body {
   color: var(--font-color);
   text-decoration: none;
 }
-#about-me {
-  display: flex;
-  flex-flow: row wrap;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-}
+
 #about-me h2 {
-  border-right: 5px groove var(--border-color);
-  margin: 0 35px 0 0px;
+  font-size: 34px;
+  font-family: var(--font-family);
+}
+section p {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  width: 70%;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  margin: 0 0 0 16px;
+  width: 70%;
+  border-left: 10px groove var(--border-color);
+  padding: 0 0 0 16px;
+}
+
+#work h2 {
   font-size: 34px;
   font-family: var(--font-family);
 }
 
-#work {
-  display: flex;
-  flex-direction: row;
-  margin: 50px 0;
-}
-#work h2 {
-  border-right: 5px groove var(--border-color);
-  margin: 0 35px 0 12px;
+#contact-me h2 {
   font-size: 34px;
   font-family: var(--font-family);
 }
+.row {
+  display: flex;
+  padding: 2%;
+  justify-content: space-between;
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -67,7 +75,8 @@ body {
   text-align: center;
 }
 .header nav {
-  float: right;
+  display: flex;
+  justify-content: flex-end;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 30px;
   margin-right: 20px;
@@ -119,24 +128,32 @@ section h2 {
   display: flex;
   justify-content: flex-end;
   flex-flow: row wrap;
-  margin: 0;
-}
-.flex-small-items {
-  position: relative;
-  display: flex;
-  padding: 5px;
-  width: 50%;
+  margin: 0 0 0 16px;
+  width: 70%;
+  border-left: 10px groove var(--border-color);
+  padding: 0 0 0 16px;
 }
 .flex-main-item {
+  position: relative;
   display: flex;
-  flex-direction: row;
   width: 100%;
+  padding: 0%;
+  margin: 1%;
 }
+
 .flex-main-item img {
   border: 3px solid var(--border-color);
   width: 100%;
   height: 350px;
 }
+
+.flex-small-items {
+  position: relative;
+  display: flex;
+  padding: 10px;
+  width: 50%;
+}
+
 .flex-small-items img {
   border: 3px solid var(--border-color);
   width: 100%;
@@ -154,22 +171,9 @@ section h2 {
     0px 0px 15px var(--border-box-color);
 }
 
-.data-specialist,
-.calculus,
-.city-college,
-.ucsd-bootcamp {
+.small-header {
   position: absolute;
   bottom: 20px;
-  font-size: 15px;
-  background-color: var(--border-box-color);
-  text-align: left;
-  padding: 5px;
-  -webkit-box-decoration-break: clone;
-  box-shadow: 10px 5px 5px var(--border-color);
-}
-.project-manager {
-  position: absolute;
-  bottom: -153px;
   font-size: 15px;
   background-color: var(--border-box-color);
   text-align: left;
@@ -184,26 +188,34 @@ footer {
   margin-bottom: 10px;
   justify-content: center;
 }
-.info {
+.info a {
   color: #30373b;
-  padding-right: 650px;
   font-size: 16px;
   font-weight: bolder;
   text-align: center;
+  width: 70%;
 }
-.info a {
-  display: inline-block;
-  margin-left: 20px;
+.info ul {
+  display: flex;
+}
+section ul {
+  width: 30%;
+}
+.left-column {
+  width: 30%;
+}
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: row;
+  }
+
+  .flex-small-items {
+    width: 100%;
+  }
 }
 
-#contact-me {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#contact-me h2 {
-  border-right: 5px groove var(--border-color);
-  margin: 0 0px 0px 98px;
-  font-size: 34px;
-  font-family: var(--font-family);
+@media screen and (min-width: 768px) {
+  .flex-small-items {
+    width: 50%;
+  }
 }
