@@ -29,6 +29,8 @@ body {
   font-size: 48px;
   color: #30373b;
   text-align: end;
+  background-color: var(--back-ground-color);
+  padding: 15px;
   /* width: 30%; */
 }
 .header nav {
@@ -54,6 +56,7 @@ a {
   display: inline-block;
   /* margin-left: 20px; */
 }
+
 .main-image {
   position: relative;
   height: 300px;
@@ -189,14 +192,10 @@ main section {
 
 /* media query*/
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
   header {
     flex-direction: row;
   }
-
-  /* .flex-small-items {
-    width: 100%;
-  } */
 }
 @media screen and (max-width: 768px) {
   .small-parent {
