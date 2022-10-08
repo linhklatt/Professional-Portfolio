@@ -16,7 +16,7 @@ This project shows how I instruct my HTML layout and using flex-box to align my 
 
 3. This is my Portfolio front-page.
 
-![Screen shot of my Portfolio](./Assets/images/%2393B3B0.jpg)
+![Screen shot of my Portfolio](./Assets/images/Untitled_%20Oct%208%2C%202022%204_56%20PM.gif)
 
 ## Credit
 
